@@ -1,0 +1,100 @@
+@import 'variables'
+
+*
+    padding : 0px
+    margin : 0px
+    box-sizing : border-box
+    text-decoration : none
+
+/* ------------------------ ENCABEZADO ------------------------ */
+
+.encabezado
+    height : 8vh
+    width : 100vw
+    padding : $XS
+
+.encabezado--index
+    background-color : $color_claro_primario
+    display : flex
+    align-items : center
+    justify-content : end
+
+.encabezado__menu
+    font-size : $L
+    color : $color_oscuro_primario
+
+.encabezado__menu:hover
+    color : $color_primario
+
+/* ------------------------ PRINCIPAL ------------------------ */
+
+.principal
+    height : 84vh
+    width : 100vw
+
+.principal__logo
+    display : block
+    align-items : center
+    background-image : url(../images/logo.svg)
+    background-size : cover
+    height : 100px
+    width : 100px
+
+.principal__titulo
+    display : block
+    align-items : center
+    text-align : center
+    letter-spacing : 1px
+    color : $color_primario
+    font-family : $fuente_primaria
+    font-size : $L
+
+.principal__buscador
+    width : 50%
+    height : 5%
+    display : block
+    border : 2px solid $color_oscuro_primario
+    border-radius : $L
+    padding : 0 0 0 8px
+
+.principal__buscador-input
+    width : 90%
+    height : 100%
+    font-size : $XS
+    border : none
+    outline : none
+
+.principal__buscador-boton
+    width : 10%
+    height : 100%
+    text-align: center
+    background-color : $color_oscuro_primario
+    color : $color_claro_primario
+
+.principal__buscador-boton:hover
+    background-color :  $color_primario
+
+.principal__fondo
+    position : absolute
+    top : 63%
+    left : 0
+    z-index : -99
+    background-image : url(../images/background.svg)
+    background-size : cover
+    height : 33%
+    width : 100%  
+
+/* ------------------------ PIE ------------------------ */ 
+
+.pie 
+    height : 8vh
+    width : 100vw
+    background-color : $color_oscuro_primario
+
+.pie__copyright
+    height : 100%
+    width : 100%
+    display : flex 
+    align-items : center
+    justify-content : center 
+    color : $color_claro_primario
