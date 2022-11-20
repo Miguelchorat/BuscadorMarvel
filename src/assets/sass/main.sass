@@ -6,74 +6,129 @@
 /* ------------------------ PRINCIPAL ------------------------ */
 
 .principal
+    height: 84%
+    width: 100%
     display: grid
-    grid-template-rows: 1fr 1fr 1fr 4fr
-    height: 84vh
-    width: 100vw
+    grid-template-rows: 3fr 1fr 4fr
+    gap: $XS
+    justify-items: center
+    
+    &__identidad
+        display: grid
+        grid-template-rows: 3fr 1fr
+        align-items: end
+        justify-items: center
 
-    &__logo
-        display: block
-        align-items: center
-        margin: auto
-        background-image: url(../images/logo.svg)
-        background-size: cover
-        height: 100px
-        width: 100px
+        &__logo
+            height: 150px
+            width: 150px
+            background-image: url(../images/logo.svg)
+            background-size: cover
 
-    &__titulo
-        display: flex
-        justify-content: center
-        letter-spacing: 1px
-        color: $color_primario
-        font-family: $fuente_primaria
-        font-size: $L
+        &__titulo
+            letter-spacing: 1px
+            color: $color_primario
+            font-family: $fuente_primaria
+            font-size: $L
+            text-align: center
 
     &__buscador
+        height: 34%
         width: 33%
-        height: 33%
+        max-width: 550px
         display: flex
         justify-content: space-between
-        border: 2px solid $color_oscuro_primario
-        border-radius: $L
-        padding: 0 0 0 10px
-        margin: auto
+        border: 1px solid $color_oscuro_primario
+        border-radius: $XS
+        padding-left: $XS
+        align-items: center
 
         &__input
-            height: 100%
+            height: 90%
+            width: 85%
             font-size: $XS
             border: none
             outline: none
 
         &__boton
+            height: 100%
             width: 8%
-            text-align: center
+            max-width: $L
+            min-width: $S
+            display: flex
+            align-items: center
+            justify-content: center            
             background-color: $color_oscuro_primario
-            color: $color_claro_primario
-            border-radius: 0 $L $L 0
+            border-radius: 0 14px 14px 0
+            
+            &__icono
+                color: $color_claro_primario
+                font-size: 100%
 
             &:hover
                 background-color:  $color_primario
 
     &__fondo
+        height: 33%
+        width: 100% 
         position: absolute
         top: 63%
         left: 0
         z-index: -99
         background-image: url(../images/background.svg)
-        background-size: cover
-        height: 33%
-        width: 100%  
+        background-size: cover    
  
     &__secciones
-        width: 100%
         height: 100%
-        display: grid
-        grid-template-columns: repeat(3,1fr)
-        justify-content: center
+        width: 100%  
+        display: flex
+
         
         &__articulo
-            background-image: url(../images/card.svg)
-            background-repeat: no-repeat
             height: 100%
             width: 100%
-            justify-self: center
+            display: grid
+            grid-template-rows: 2fr 1fr 2fr 1fr
+            padding: $S 0
+            background-image: url(../images/card.svg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            align-items: center
+            justify-items: center
+
+            &__icono
+                height: 100px
+                width: 100px
+                background-position: center
+                background-size: auto
+                align-self: end
+            
+            &__titulo
+                letter-spacing: 1px
+                font-size: $M
+                font-family: $fuente_primaria
+                align-self: start
+
+            &__info
+                height: 90%
+                width: 50%
+                font-size: $XS
+                font-family: $fuente_secundaria
+                text-align: center
+                align-self: start
+
+            &__boton
+                height: 75%
+                width: 50%
+                color: $color_claro_primario
+                font-size: $M
+                font-family: $fuente_primaria
+                letter-spacing: 1px
+                text-align: center
+                background-image: url(../images/boton.svg)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                align-self: center
+         

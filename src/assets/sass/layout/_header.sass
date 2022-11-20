@@ -1,7 +1,9 @@
 .encabezado
-    height: 8vh
-    width: 100vw
+    height: 8%
+    width: 100%
+    max-height: $XL
     padding: $XS
+
 
     &--index
         background-color: $color_claro_primario
@@ -10,8 +12,9 @@
         justify-content: end
 
     &__menu
-        font-size: $L
+        font-size: $M
         color: $color_oscuro_primario
 
-    &__menu:hover
-        color: $color_primario
+
+        &:hover
+            color: $color_primario
