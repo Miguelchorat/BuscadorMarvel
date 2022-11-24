@@ -1,20 +1,122 @@
 .encabezado
-    height: 8%
+    height: 48px
     width: 100%
     max-height: $XL
-    padding: $XS
+    display: flex
+    justify-content: space-between
+    padding: 0 $XS 0 $XS
 
-
-    &--index
+    &__index
         background-color: $color_claro_primario
-        display: flex
-        align-items: center
         justify-content: end
+        
+        &__menu
+            font-size: $M
+            color: $color_oscuro_primario
+            align-self: center
 
-    &__menu
-        font-size: $M
-        color: $color_oscuro_primario
+            &:hover
+                color: $color_primario
 
+    &__informacion
+        width: 100%
+        background-color: $color_oscuro_primario
+        display: flex
 
-        &:hover
-            color: $color_primario
+        &__navegacion
+            height: 100%
+            width: 50%
+            display: flex
+            flex-direction: row
+            justify-content: end
+            align-content: center
+
+            nav
+                height: 100%
+                width: 100%
+                display: flex
+                
+            ul  
+                height: 100%
+                width: 100%
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr 1fr
+                color: $color_claro_primario
+                list-style: none
+                padding-right: $S
+
+            ul li
+                height: 100%
+                width: 100%
+                display: flex                
+
+            ul li a                
+                height: 100%
+                width: 100%
+                font-size: $XS
+                text-align: center
+                color: $color_claro_primario
+                font-family: $fuente_secundaria
+
+            ul li a:hover
+                color: $color_primario
+                border-bottom: 4px solid $color_primario
+                
+            &__menu
+                font-size: $M
+                color: $color_claro_primario
+                align-self: center
+
+                &:hover
+                    color: $color_primario
+
+        &__explorador
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            &__logo
+                height: 40px
+                width: 40px
+                background-image: url(../images/logo.svg)
+                background-size: cover
+
+            &__buscador
+                height: 50%
+                width: 40%
+                max-width: 550px
+                padding-left: $XS
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                &__input
+                    height: 100%
+                    width: 100%
+                    font-size: $XS
+                    color: $color_claro_primario
+                    background-color: $color_oscuro_secundario
+                    border: none
+                    border-radius: $XS 0 0 $XS
+                    padding-left: $XS
+                    padding-right: $XS
+                    outline: none
+
+                &__boton
+                    height: 100%
+                    width: 8%
+                    max-width: $L
+                    min-width: $M
+                    display: flex
+                    align-items: center
+                    justify-content: center     
+                    background-color: $color_oscuro_secundario
+                    border-radius: 0 12px 12px 0
+
+                    &__icono
+                        color: $color_claro_primario
+                        font-size: 80%
+    
+    
