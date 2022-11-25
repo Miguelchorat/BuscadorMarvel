@@ -1,0 +1,130 @@
+.principal
+    display: grid
+    grid-template-rows: 4fr 1fr 6fr
+    gap: $XS
+    justify-items: center
+    min-width: 1150px
+    
+    &__identidad
+        display: grid
+        grid-template-rows: 3fr 1fr
+        align-items: end
+        justify-items: center
+
+        &__logo
+            height: 125px
+            width: 125px
+            background-image: url(../images/logo.svg)
+            background-size: cover
+
+        &__titulo
+            letter-spacing: 1px
+            color: $color_primario
+            font-family: $fuente_primaria
+            font-size: $L
+            text-align: center
+
+    &__buscador
+        height: 100%
+        width: 33%
+        max-height: $M
+        max-width: 550px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &__input
+            height: 100%
+            width: 100%
+            font-size: $XS
+            border: 1px solid $color_oscuro_primario
+            border-right: none
+            border-radius: $XS 0 0 $XS
+            padding-left: $XS
+            padding-right: $XS
+            outline: none
+
+        &__boton
+            height: 100%
+            width: 8%
+            max-width: $L
+            min-width: $M
+            display: flex
+            align-items: center
+            justify-content: center            
+            background-color: $color_oscuro_primario
+            border: 1px solid $color_oscuro_primario
+            border-radius: 0 12px 12px 0
+            
+            &__icono
+                color: $color_claro_primario
+                font-size: 100%
+
+            &:hover
+                background-color:  $color_primario
+
+    &__fondo
+        height: 33%
+        width: 100% 
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: -99
+        background-image: url(../images/background.svg)
+        background-repeat: no-repeat
+        background-size: cover    
+ 
+    &__secciones
+        height: 100%
+        width: 100%  
+        display: flex
+        justify-content: space-evenly
+        
+        &__articulo
+            height: 85%
+            width: 20%
+            display: grid
+            grid-template-rows: 2fr 1fr 2fr 1fr 15px
+            background-image: url(../images/card.svg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            align-items: center
+            justify-items: center
+
+            &__icono
+                height: 85px
+                width: 85px
+                background-position: center
+                background-size: auto
+                align-self: end
+            
+            &__titulo
+                letter-spacing: 1px
+                font-size: $M
+                font-family: $fuente_primaria
+                align-self: start
+
+            &__info
+                height: 90%
+                width: 75%
+                font-size: $XS
+                font-family: $fuente_secundaria
+                text-align: center
+                align-self: start
+
+            &__boton
+                height: 75%
+                width: 50%
+                color: $color_claro_primario
+                font-size: $S
+                font-family: $fuente_primaria
+                letter-spacing: 1px
+                background-image: url(../images/boton.svg)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                display: flex
+                justify-content: center
+                align-items: center
+         
