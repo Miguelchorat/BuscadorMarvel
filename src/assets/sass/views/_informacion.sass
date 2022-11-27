@@ -1,0 +1,52 @@
+.principal
+
+    &__titulo
+        text-align: center
+        margin-top: $XL
+        font-family: $fuente_primaria
+        font-size: $M
+
+    &__personaje
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(6,1fr)
+        justify-items: center
+        gap: $XS
+        padding: 0 $XXL 0 $XXL
+
+        &__item
+            position: relative
+            background-color: $color_oscuro_primario
+            transition: .4s
+
+            &__logo
+                height: 100%
+                width: 100%
+                max-height: 200px
+                border-bottom: 4px solid $color_primario
+                z-index: 1
+
+            &__nombre
+                width: 100%
+                text-align: center
+                color: $color_claro_primario            
+                font-family: $fuente_secundaria
+                padding: $XS
+                z-index: 1
+
+            &__web
+                color: $color_claro_primario
+                padding: 0 $XXS $XXS
+                z-index: 1
+            
+            &:hover
+                background-color: $color_primario
+
+        &__item::before
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 0
+            border-bottom: 30px solid $color_claro_primario
+            border-left: 40px solid rgba(0,0,0,0)
+                

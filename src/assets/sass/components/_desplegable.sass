@@ -1,0 +1,103 @@
+.desplegable
+    position: fixed
+    top: 0
+    right: -20vw
+    height: 100%
+    width: 20vw
+    max-width: 320px
+    min-width: 280px
+    z-index: 99
+    background-color: $color_oscuro_secundario
+    display: flex
+    flex-direction: column
+    gap: $XL
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px
+    transition: .6s
+    
+    &__cerrar
+        height: 100%
+        max-height: $XL
+        align-self: end     
+        display: flex
+        align-items: center
+        padding-right: $XS
+        
+        &__icono
+            color: $color_claro_secundario
+
+            &:hover
+                color: $color_primario
+
+    &__usuario
+        display: flex
+        flex-direction: row
+        border-top: 1px solid $color_claro_secundario
+        border-bottom: 1px solid $color_claro_secundario
+        padding: $XS 0 $XS $XS
+
+        &__img
+            height: 82px
+            width: 82px
+            border-radius: 50%
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px
+        
+        &__sesion
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding-left: $XS
+            gap: 8px 
+
+            &__identificacion
+                width: 100%
+                display: flex
+                color: $color_claro_primario
+                font-family: $fuente_secundaria
+                font-size: $XS
+
+                &__enlace
+                    color: $color_primario
+                    font-family: $fuente_secundaria
+                    font-size: $XS
+        
+            &__info
+                color: $color_claro_primario
+                font-family: $fuente_secundaria
+                font-size: $XXS
+
+    &__lista
+        display: grid
+        grid-template-rows: 1fr 1fr
+        gap: $XS
+        list-style: none
+
+        &__item
+            display: grid
+            grid-template-columns: 1fr 6fr
+            gap: $XXS
+
+            &__icono
+                align-self: center
+                justify-self: end
+                color: $color_claro_primario                
+
+            &__enlace
+                color: $color_claro_primario
+                text-decoration: none
+                font-family: $fuente_secundaria
+                font-size: $XS
+                align-self: center
+
+                &:hover
+                    color: $color_primario
+
+.fondo__desplegable
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    background-color: $color_oscuro_secundario
+    opacity: $opacidad
+    display: none

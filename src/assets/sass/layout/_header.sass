@@ -1,122 +1,126 @@
 .encabezado
-    height: 48px
+    height: 10%
     width: 100%
+    min-height: $XL
     max-height: $XL
     display: flex
+    flex-direction: row
     justify-content: space-between
+    align-items: start
     padding: 0 $XS 0 $XS
 
-    &__index
+    &--index
         background-color: $color_claro_primario
-        justify-content: end
-        
-        &__menu
-            font-size: $M
-            color: $color_oscuro_primario
-            align-self: center
+        justify-content: flex-end
+    
+    &--informacion
+        background-color: $color_oscuro_primario
 
+    &__menu
+        align-self: center     
+        display: flex
+        align-items: center
+
+        &__icono
+            font-size: $M
+            text-align: center
+            color: $color_oscuro_primario
+
+            &--alter
+                color: $color_claro_primario
+                
             &:hover
                 color: $color_primario
 
-    &__informacion
+    &__explorador
+        height: 100%
         width: 100%
-        background-color: $color_oscuro_primario
         display: flex
+        flex-direction: row
+        align-items: center
 
-        &__navegacion
-            height: 100%
-            width: 50%
+        &__logo
+            height: $XL
+            width: $XL
+            background-image: url(../images/logo.svg)
+            background-size: cover
+
+        &__buscador
+            height: 60%
+            width: 40%
+            max-width: 550px
+            padding-left: $XS
             display: flex
-            flex-direction: row
-            justify-content: end
-            align-content: center
+            justify-content: space-between
+            align-items: center
 
-            nav
-                height: 100%
-                width: 100%
-                display: flex
-                
-            ul  
-                height: 100%
-                width: 100%
-                display: grid
-                grid-template-columns: 1fr 1fr 1fr 1fr
-                color: $color_claro_primario
-                list-style: none
-                padding-right: $S
-
-            ul li
-                height: 100%
-                width: 100%
-                display: flex                
-
-            ul li a                
+            &__input
                 height: 100%
                 width: 100%
                 font-size: $XS
-                text-align: center
                 color: $color_claro_primario
-                font-family: $fuente_secundaria
+                background-color: $color_oscuro_secundario
+                border: none
+                border-radius: $XS 0 0 $XS
+                padding-left: $XS
+                padding-right: $XS
+                outline: none
 
-            ul li a:hover
-                color: $color_primario
-                border-bottom: 4px solid $color_primario
-                
-            &__menu
-                font-size: $M
-                color: $color_claro_primario
-                align-self: center
+            &__boton
+                height: 100%
+                width: 8%
+                max-width: $L
+                min-width: $M
+                display: flex
+                align-items: center
+                justify-content: center     
+                background-color: $color_oscuro_secundario
+                border-radius: 0 12px 12px 0
 
-                &:hover
-                    color: $color_primario
+                &__icono
+                    color: $color_claro_primario
+                    font-size: 100%
 
-        &__explorador
+                    &:hover
+                        color: $color_primario
+
+    &__nav
+        height: 100%
+        width: 50%
+        display: flex
+        flex-direction: row
+        justify-content: end
+        align-content: center
+
+        &__lista
             height: 100%
             width: 100%
-            display: flex
-            flex-direction: row
-            align-items: center
-
-            &__logo
-                height: 40px
-                width: 40px
-                background-image: url(../images/logo.svg)
-                background-size: cover
-
-            &__buscador
-                height: 50%
-                width: 40%
-                max-width: 550px
-                padding-left: $XS
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            color: $color_claro_primario
+            list-style: none
+            padding-right: $S
+        
+            &__item
+                height: 100%
+                width: 100%
                 display: flex
-                justify-content: space-between
                 align-items: center
+                justify-content: center
 
-                &__input
-                    height: 100%
+                & a
                     width: 100%
                     font-size: $XS
+                    text-align: center
                     color: $color_claro_primario
-                    background-color: $color_oscuro_secundario
-                    border: none
-                    border-radius: $XS 0 0 $XS
-                    padding-left: $XS
-                    padding-right: $XS
-                    outline: none
+                    font-family: $fuente_secundaria
+                    
 
-                &__boton
-                    height: 100%
-                    width: 8%
-                    max-width: $L
-                    min-width: $M
-                    display: flex
-                    align-items: center
-                    justify-content: center     
-                    background-color: $color_oscuro_secundario
-                    border-radius: 0 12px 12px 0
+                &:hover
+                    border-bottom: 4px solid $color_claro_secundario    
 
-                    &__icono
-                        color: $color_claro_primario
-                        font-size: 80%
-    
-    
+                &__active                
+                    border-bottom: 4px solid $color_primario
+
+                    & a
+                        color: $color_primario
