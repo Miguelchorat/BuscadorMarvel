@@ -53,34 +53,44 @@
     </main>
 
     <div class="desplegable">
+
         <a class="desplegable__cerrar" href="#">
             <span class="desplegable__cerrar__icono material-symbols-outlined">close</span>
         </a>
 
-        <div class="desplegable__usuario">
-            <img class="desplegable__usuario__img" src="/hulk.218e4617.jpg">
-            <div class="desplegable__usuario__sesion">
-                <p class="desplegable__usuario__sesion__identificacion">
-                    <a href="#" class="desplegable__usuario__sesion__identificacion__enlace">Entra</a>
-                    &nbsp;
-                    o
-                    &nbsp;
-                    <a href="#" class="desplegable__usuario__sesion__identificacion__enlace">registrate</a>
-                </p>
-                <p class="desplegable__usuario__sesion__info">para participar en la web</p>
+        <div class="desplegable__inicio">
+            <div class="desplegable__inicio__usuario">
+                <img class="desplegable__inicio__usuario__img" src="/hulk.218e4617.jpg">
+                <div class="desplegable__inicio__usuario__sesion">
+                    <p class="desplegable__inicio__usuario__sesion__identificacion">
+                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace" id="iniciarSesion">Entra</a>
+                        &nbsp;
+                        o
+                        &nbsp;
+                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace">registrate</a>
+                    </p>
+                    <p class="desplegable__inicio__usuario__sesion__info">para participar en la web</p>
+                </div>
             </div>
+    
+            <ul class="desplegable__inicio__lista">
+                <li class="desplegable__inicio__lista__item">
+                    <span class="desplegable__inicio__lista__item__icono material-symbols-outlined">language</span>
+                    <a href="https://www.marvel.com" target="_blank" class="desplegable__inicio__lista__item__enlace">Página web</a>
+                </li>
+                <li class="desplegable__inicio__lista__item">
+                    <span class="desplegable__inicio__lista__item__icono material-symbols-outlined">mail</span>
+                    <a href="" class="desplegable__inicio__lista__item__enlace">Contacto</a>
+                </li>
+            </ul>
         </div>
 
-        <ul class="desplegable__lista">
-            <li class="desplegable__lista__item">
-                <span class="desplegable__lista__item__icono material-symbols-outlined">language</span>
-                <a href="https://www.marvel.com" target="_blank" class="desplegable__lista__item__enlace">Página web</a>
-            </li>
-            <li class="desplegable__lista__item">
-                <span class="desplegable__lista__item__icono material-symbols-outlined">mail</span>
-                <a href="" class="desplegable__lista__item__enlace">Contacto</a>
-            </li>
-        </ul>
+        <div class="desplegable__iniciar">
+            <input class="desplegable__iniciar__input" placeholder="Correo o Nombre de usuario">
+            <input class="desplegable__iniciar__input" placeholder="Contraseña">
+            <a class="desplegable__iniciar__boton" href="#">REGISTRARSE</a>
+            <a class="desplegable__iniciar__enlace" href="#">Recuperar contraseña</a>
+        </div>
     </div>
 
     <div class="fondo__desplegable"></div>

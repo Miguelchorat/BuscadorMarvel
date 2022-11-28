@@ -295,22 +295,38 @@
 }
 
 .principal__secciones__articulo__boton {
-  height: 100%;
+  height: 75%;
   width: 35%;
   color: #fff;
-  background-image: url("boton2.1e1cf21c.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f0131e;
   justify-content: center;
   align-items: center;
   font-family: Roboto Condensed, sans-serif;
   font-size: 1rem;
   display: flex;
+  position: relative;
 }
 
 .principal__secciones__articulo__boton:hover {
-  color: #e7e7e7;
+  background-color: #9f0013;
+}
+
+.principal__secciones__articulo__boton:after {
+  content: "";
+  border-bottom: 15px solid #0000;
+  border-left: 15px solid #e7e7e7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.principal__secciones__articulo__boton:before {
+  content: "";
+  border-bottom: 15px solid #e7e7e7;
+  border-left: 15px solid #0000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .principal__titulo {
@@ -330,8 +346,12 @@
 }
 
 .principal__personaje__item {
+  cursor: pointer;
   background-color: #101010;
-  transition: all .4s;
+  background-image: linear-gradient(#f0131e, #f0131e);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  transition: all .2s;
   position: relative;
 }
 
@@ -358,8 +378,12 @@
   padding: 0 .8rem .8rem;
 }
 
+.principal__personaje__item__web:hover {
+  color: #9f0013;
+}
+
 .principal__personaje__item:hover {
-  background-color: #f0131e;
+  background-size: 100% 100%;
 }
 
 .principal__personaje__item:before {
@@ -381,7 +405,7 @@
   flex-direction: column;
   gap: 3rem;
   transition: all .6s;
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   right: -20vw;
@@ -405,7 +429,12 @@
   color: #f0131e;
 }
 
-.desplegable__usuario {
+.desplegable__inicio {
+  flex-direction: column;
+  display: flex;
+}
+
+.desplegable__inicio__usuario {
   border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
   flex-direction: row;
@@ -413,14 +442,14 @@
   display: flex;
 }
 
-.desplegable__usuario__img {
+.desplegable__inicio__usuario__img {
   height: 82px;
   width: 82px;
   border-radius: 50%;
   box-shadow: 0 3px 8px #0006;
 }
 
-.desplegable__usuario__sesion {
+.desplegable__inicio__usuario__sesion {
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -429,7 +458,7 @@
   display: flex;
 }
 
-.desplegable__usuario__sesion__identificacion {
+.desplegable__inicio__usuario__sesion__identificacion {
   width: 100%;
   color: #fff;
   font-family: Roboto, sans-serif;
@@ -437,37 +466,38 @@
   display: flex;
 }
 
-.desplegable__usuario__sesion__identificacion__enlace {
+.desplegable__inicio__usuario__sesion__identificacion__enlace {
   color: #f0131e;
   font-family: Roboto, sans-serif;
   font-size: 1rem;
 }
 
-.desplegable__usuario__sesion__info {
+.desplegable__inicio__usuario__sesion__info {
   color: #fff;
   font-family: Roboto, sans-serif;
   font-size: .8rem;
 }
 
-.desplegable__lista {
+.desplegable__inicio__lista {
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
+  padding-top: 2rem;
   list-style: none;
   display: grid;
 }
 
-.desplegable__lista__item {
+.desplegable__inicio__lista__item {
   grid-template-columns: 1fr 6fr;
   gap: .8rem;
   display: grid;
 }
 
-.desplegable__lista__item__icono {
+.desplegable__inicio__lista__item__icono {
   color: #fff;
   place-self: center end;
 }
 
-.desplegable__lista__item__enlace {
+.desplegable__inicio__lista__item__enlace {
   color: #fff;
   align-self: center;
   font-family: Roboto, sans-serif;
@@ -475,8 +505,43 @@
   text-decoration: none;
 }
 
-.desplegable__lista__item__enlace:hover {
+.desplegable__inicio__lista__item__enlace:hover {
   color: #f0131e;
+}
+
+.desplegable__iniciar {
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  display: none;
+}
+
+.desplegable__iniciar__input {
+  padding: .5rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+}
+
+.desplegable__iniciar__boton {
+  color: #fff;
+  text-align: center;
+  background-color: #f0131e;
+  padding: .5rem;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 1rem;
+}
+
+.desplegable__iniciar__enlace {
+  width: 60%;
+  color: #f0131e;
+  text-align: end;
+  align-self: end;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 1rem;
+}
+
+.desplegable__iniciar__enlace:hover {
+  color: #fff;
 }
 
 .fondo__desplegable {

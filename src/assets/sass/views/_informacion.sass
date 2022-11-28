@@ -17,7 +17,11 @@
         &__item
             position: relative
             background-color: $color_oscuro_primario
-            transition: .4s
+            background-image: linear-gradient($color_primario,$color_primario)
+            background-size: 100% 0
+            background-repeat: no-repeat
+            cursor: pointer
+            transition: .2s
 
             &__logo
                 height: 100%
@@ -38,9 +42,12 @@
                 color: $color_claro_primario
                 padding: 0 $XXS $XXS
                 z-index: 1
+
+                &:hover
+                    color: $color_primario_hover
             
             &:hover
-                background-color: $color_primario
+                background-size: 100% 100%
 
         &__item::before
             content: ""
