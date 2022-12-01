@@ -53,21 +53,22 @@
     </main>
 
     <div class="desplegable">
-
-        <a class="desplegable__cerrar" href="#">
-            <span class="desplegable__cerrar__icono material-symbols-outlined">close</span>
-        </a>
+        
+        <header class="desplegable__header">
+            <span class="desplegable__header__icono material-symbols-outlined">arrow_back</span>
+            <span class="desplegable__header__icono material-symbols-outlined">close</span>
+        </header>
 
         <div class="desplegable__inicio">
             <div class="desplegable__inicio__usuario">
                 <img class="desplegable__inicio__usuario__img" src="/hulk.218e4617.jpg">
                 <div class="desplegable__inicio__usuario__sesion">
                     <p class="desplegable__inicio__usuario__sesion__identificacion">
-                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace" id="iniciarSesion">Entra</a>
+                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace">Entra</a>
                         &nbsp;
                         o
                         &nbsp;
-                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace">registrate</a>
+                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace" id="registrarse">registrate</a>
                     </p>
                     <p class="desplegable__inicio__usuario__sesion__info">para participar en la web</p>
                 </div>
@@ -80,17 +81,47 @@
                 </li>
                 <li class="desplegable__inicio__lista__item">
                     <span class="desplegable__inicio__lista__item__icono material-symbols-outlined">mail</span>
-                    <a href="" class="desplegable__inicio__lista__item__enlace">Contacto</a>
+                    <a href="#" class="desplegable__inicio__lista__item__enlace">Contacto</a>
                 </li>
             </ul>
         </div>
 
-        <div class="desplegable__iniciar">
-            <input class="desplegable__iniciar__input" placeholder="Correo o Nombre de usuario">
-            <input class="desplegable__iniciar__input" placeholder="Contraseña">
-            <a class="desplegable__iniciar__boton" href="#">REGISTRARSE</a>
+        <form class="desplegable__iniciar" method="get" action="#">
+            <h2 class="desplegable__iniciar__titulo">INICIAR SESIÓN</h2>
+            <p class="desplegable__iniciar__informacion">Los credenciales son incorrectos</p>
+            <input type="text" class="desplegable__iniciar__input" placeholder="Correo o Nombre de usuario" name="nombreUsuario">
+            <input type="password" class="desplegable__iniciar__input" placeholder="Contraseña" name="clave">
+            <a class="desplegable__iniciar__boton" href="#">ENTRAR</a>
             <a class="desplegable__iniciar__enlace" href="#">Recuperar contraseña</a>
-        </div>
+            <p class="desplegable__iniciar__registro">¿No tienes cuenta?</p>
+            <a class="desplegable__iniciar__boton" href="#">REGISTRARSE</a>
+        </form>
+
+        <form class="desplegable__registrar">
+            <h2 class="desplegable__registrar__titulo">REGISTRARSE</h2>
+            <input type="text" class="desplegable__registrar__input" placeholder="Nombre de usuario" name="nombreUsuario">
+            <p class="desplegable__registrar__informacion">Introduce un nombre de usuario válido</p>
+            <input type="password" class="desplegable__registrar__input" placeholder="Introduce tu contraseña" name="clave">
+            <p class="desplegable__registrar__informacion">Introduce una contraseña válida</p>
+            <input type="password" class="desplegable__registrar__input" placeholder="Introduce tu contraseña de nuevo" name="claveRepetida">
+            <p class="desplegable__registrar__informacion">La contraseña no coinciden</p>
+            <input type="text" class="desplegable__registrar__input" placeholder="Introduce tu correo" name="correo">
+            <p class="desplegable__registrar__informacion">Introduce un correo válido</p>
+            <input type="date" class="desplegable__registrar__input" name="fecha">
+            <p class="desplegable__registrar__informacion">Introduce una fecha válido</p>
+            <a class="desplegable__registrar__boton" href="#">REGISTRARSE</a>
+            <p class="desplegable__registrar__iniciar">¿Ya tienes una cuenta?</p>
+            <a class="desplegable__registrar__boton" href="#">INICIAR SESIÓN</a>
+        </form>
+
+        <form class="desplegable__contacto">
+            <h2 class="desplegable__contacto__titulo">CONTACTO</h2>
+            <input type="text" class="desplegable__contacto__input" placeholder="Nombre de usuario" name="nombreUsuario">
+            <input type="text" class="desplegable__contacto__input" placeholder="Introduce tu correo" name="correo">
+            <textarea type="text" class="desplegable__contacto__textarea" placeholder="Introduce tu mensaje" name="mensaje"></textarea>     
+            <a class="desplegable__contacto__boton" href="#">ENVIAR</a>
+            <p class="desplegable__contacto__informacion">Los credenciales son incorrectos</p>
+        </form>
     </div>
 
     <div class="fondo__desplegable"></div>
