@@ -2,19 +2,17 @@
 @import 'base/reset'
 @import 'layout/header'
 @import 'layout/footer'
-@import 'views/index'
-@import 'views/informacion'
-@import 'components/desplegable'
 @import 'utilities/extends'
+@import 'views/index'
+@import 'views/listado'
+@import 'views/perfil'
+@import 'components/carta'
+@import 'components/personaje'
+@import 'components/encabezado'
+@import 'components/popup'
+@import 'components/desplegable'
+@import 'views/404'
+@import 'themes/oscuro'
+    
 
-html, body
-    height: 100%
-    display: flex
-    flex-direction: column
-    min-height: 646px
-
-.principal
-    display: flex
-    flex-direction: column
-    gap: $S
-    flex-grow: 1
+//Archivo principal de sass que se importara en el HTML. Contiene las importaciones de cada uno de los archivos sass que contendra sus respectivos estilos.    

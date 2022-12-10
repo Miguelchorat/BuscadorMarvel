@@ -1,102 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Inicio</title>
+    <!-- Título de la página -->
+    <title>Inicio</title> 
+    <!-- Icono de la página -->
+    <link rel="icon" type="image/x-icon" href="/logo.e1e57082.svg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enlace hacía el archivo principal donde se ubicara nuestros estilos en cascada -->
     <link rel="stylesheet" href="/index.ad85b7e3.css">
+    <!-- Controlador del rescalado del DPI de las pantallas móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Descripción de la página -->
     <meta name="description" content="Buscar tus personajes, comics o series favoritas de la editorial Marvel Comics.">
+    <!-- Enlace para el uso de los iconos pertenecientes a Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0">
 </head>
 <body>
+    <!-- 
+        Se ha usado la metodología BEM para el nombramiento de clases. Haciendo mas sencilla la comprensión y organización de tanto el HTML como luego el CSS
+     -->
 
+    <!-- Encabezado de la página web. Es una variante solo para el inicio de la página web de ahi el modificador --index -->
     <header class="encabezado encabezado--index">
         <a class="encabezado__menu" href="#">
             <span class="encabezado__menu__icono material-symbols-outlined">menu</span>
         </a>
     </header>
 
+    <!-- Clase principal donde estará el contenido principal de la página -->
     <main class="principal principal--index">
+        <!-- Sección donde se ubicara el logo y el título de la página -->
         <section class="principal__identidad">
             <svg class="principal__identidad__logo"></svg>
             <h1 class="principal__identidad__titulo">Buscador Marvel</h1>
         </section>
 
+        <!-- El buscador de la página de inicio que contendra un icono de busqueda en forma de lupa gracias a los iconos importables de google -->
         <section class="principal__buscador">
             <input class="principal__buscador__input" placeholder="Buscar comics, personajes, series...">
-            <a class="principal__buscador__boton" href="#">
+            <a class="principal__buscador__boton" href="/listado.html">
                 <span class="principal__buscador__boton__icono material-symbols-outlined">search</span>
             </a>
         </section>
 
+        <!-- Sección donde tendremos los diferentes apartados de la página web y su redirección a dicho apartados -->
         <section class="principal__secciones">
+            <!-- Primer articulo que da una explicación breve de los personajes de marvel y un botón de redirección al apartado -->
             <article class="principal__secciones__articulo">
-                <img class="principal__secciones__articulo__icono" src="/icono_personajes.61139cd1.svg" alt="icono de la sección personajes">
+                <img class="principal__secciones__articulo__icono" src="/icono_personajes.15ca9b32.svg" alt="icono de la sección personajes">
                 <h2 class="principal__secciones__articulo__titulo">PERSONAJES</h2>
                 <p class="principal__secciones__articulo__info">Entra y encuentra una lista con todos los heroes y villanos de Marvel sacados de los comics.</p>
-                <a class="principal__secciones__articulo__boton" href="/informacion.html">ENTRAR</a>
+                <a class="principal__secciones__articulo__boton" href="/listado_personajes.html">ENTRAR</a>
             </article>
+            <!-- Segundo articulo que da una explicación breve de los comics de marvel y un botón de redirección al apartado -->
             <article class="principal__secciones__articulo">
-                <img class="principal__secciones__articulo__icono" src="/icono_comics.ec1f7df2.svg" alt="icono de la sección comics">
+                <img class="principal__secciones__articulo__icono" src="/icono_comics.4b2d5560.svg" alt="icono de la sección comics">
                 <h2 class="principal__secciones__articulo__titulo">COMICS</h2>
                 <p class="principal__secciones__articulo__info">Entra y encuentra una lista con todos los famosos comics de la editorial Marvel.</p>
-                <a class="principal__secciones__articulo__boton" href="#">ENTRAR</a>
+                <a class="principal__secciones__articulo__boton" href="/listado_comics.html">ENTRAR</a>
             </article>
+            <!-- Tercer articulo que da una explicación breve de las series de marvel y un botón de redirección al apartado -->
             <article class="principal__secciones__articulo">
-                <img class="principal__secciones__articulo__icono" src="/icono_series.0d5b81fd.svg" alt="icono de la sección series">
+                <img class="principal__secciones__articulo__icono" src="/icono_series.f9c2278f.svg" alt="icono de la sección series">
                 <h2 class="principal__secciones__articulo__titulo">SERIES</h2>
                 <p class="principal__secciones__articulo__info">Entra y encuentra una lista con todos las famosas series que recopilan comics de la editorial Marvel.</p>
-                <a class="principal__secciones__articulo__boton" href="#">ENTRAR</a>
+                <a class="principal__secciones__articulo__boton" href="/listado_series.html">ENTRAR</a>
             </article>
         </section>
     </main>
 
+    <!-- Pie de página de la web. Contiene los datos necesarios de Marvel para el uso de su licencia -->
+    <footer class="pie">
+        <a class="pie__copyright" href="/404.html">Data provided by Marvel. © 2022 Marvel</a>
+    </footer>
+    
+    <!-- Menu desplegable donde tendremos diferentes opciones como la sesión de usuario, contacto, página oficial de Marvel y el modo oscuro -->
     <div class="desplegable">
-        
+
+        <!-- El encabezado de la página que muestra la flecha para atras de navegación y la X para cerrar el menu desplegable -->
         <header class="desplegable__header">
             <span class="desplegable__header__icono material-symbols-outlined">arrow_back</span>
             <span class="desplegable__header__icono material-symbols-outlined">close</span>
         </header>
 
+        <!-- Primer apartado del menu desplegable. Veremos la sesión del usuario si esta logeado o no. También veremos una lista con diferentes opciones
+        de la página web como la página oficial de Marvel, contacto y el modo oscuro-->
         <div class="desplegable__inicio">
-            <div class="desplegable__inicio__usuario">
-                <img class="desplegable__inicio__usuario__img" src="/hulk.218e4617.jpg">
-                <div class="desplegable__inicio__usuario__sesion">
-                    <p class="desplegable__inicio__usuario__sesion__identificacion">
-                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace">Entra</a>
+            <!-- La primera parte del apartado de inicio es la sesión de usuario -->
+            <div class="desplegable__inicio__sesion">
+                <!-- Sección que muestra una foto del usuario y un icono y un fondo para cuando este registrado poder dar click en el icono del lapiz para cambiar de foto.
+                La implementación al depender de JS y no de input file no esta implementada -->
+                <section class="desplegable__inicio__sesion__img" src="assets/img/hulk.jpg">
+                    <a class="desplegable__inicio__sesion__img__icono material-symbols-outlined" href="#">edit</a>
+                    <div class="desplegable__inicio__sesion__img__fondo"></div>
+                </section>
+                <!-- Sección que se mostrará cuando el usuario no tenga una sesión iniciada. Dara las opciones de logear y registrarse como enlace -->
+                <section class="desplegable__inicio__sesion__cerrada">
+                    <p class="desplegable__inicio__sesion__cerrada__identificacion">
+                        <a href="#" class="desplegable__inicio__sesion__cerrada__identificacion__enlace">Entra</a>
                         &nbsp;
                         o
                         &nbsp;
-                        <a href="#" class="desplegable__inicio__usuario__sesion__identificacion__enlace" id="registrarse">registrate</a>
+                        <a href="#" class="desplegable__inicio__sesion__cerrada__identificacion__enlace" id="registrarse">registrate</a>
                     </p>
-                    <p class="desplegable__inicio__usuario__sesion__info">para participar en la web</p>
-                </div>
+                    <p class="desplegable__inicio__sesion__cerrada__info">para participar en la web</p>
+                </section>
+                <!-- Sección que se mostrará cuando el usuario tenga una sesión iniciada. Dará la bienvenida al usuario y tendrá un enlace para la redirección al
+                apartado de perfil de usuario. -->
+                <section class="desplegable__inicio__sesion__abierta">                    
+                    <p class="desplegable__inicio__sesion__abierta__informacion">Hola,&nbsp;<span class="desplegable__inicio__sesion__abierta__informacion__usuario">
+                        PLACEHOLDER
+                    </span></p>
+                    <a class="desplegable__inicio__sesion__abierta__perfil" href="/perfil.html">                        
+                        Gestionar tu cuenta
+                    </a>
+                </section>
             </div>
-    
+            
+            <!-- Segunda parte del apartado de inicio. En está parte tendremos un listado con los distintos items como un enlace hacia la página web de Marvel,
+                contacto o el modo oscuro  -->
             <ul class="desplegable__inicio__lista">
-                <li class="desplegable__inicio__lista__item">
-                    <span class="desplegable__inicio__lista__item__icono material-symbols-outlined">language</span>
-                    <a href="https://www.marvel.com" target="_blank" class="desplegable__inicio__lista__item__enlace">Página web</a>
+                <!-- Enlace e icono para la página web de Marvel -->
+                <li class="desplegable__inicio__lista__item">                    
+                    <a href="https://www.marvel.com" target="_blank" class="desplegable__inicio__lista__item__enlace">
+                        <span class="desplegable__inicio__lista__item__enlace__icono material-symbols-outlined">language</span>
+                        MARVEL.COM
+                    </a>
                 </li>
-                <li class="desplegable__inicio__lista__item">
-                    <span class="desplegable__inicio__lista__item__icono material-symbols-outlined">mail</span>
-                    <a href="#" class="desplegable__inicio__lista__item__enlace">Contacto</a>
+                <!-- Enlace e icono para la redirección al apartado de contacto -->
+                <li class="desplegable__inicio__lista__item">                    
+                    <a href="#" class="desplegable__inicio__lista__item__enlace">
+                        <span class="desplegable__inicio__lista__item__enlace__icono material-symbols-outlined">mail</span>
+                        CONTACTO
+                    </a>
+                </li>
+                <!-- Mostrará un desplegable que dará dos opciones extra para cambiar entre modo día y modo noche -->
+                <li class="desplegable__inicio__lista__item">                    
+                    <a href="#" class="desplegable__inicio__lista__item__enlace desplegable__inicio__lista__item__enlace--corto">
+                        <span class="desplegable__inicio__lista__item__enlace__icono material-symbols-outlined">dark_mode</span>
+                        ASPECTO:<span class="desplegable__inicio__lista__item__enlace__icono__modo">DÍA</span>
+                        <span class="desplegable__inicio__lista__item__enlace__desplegable material-symbols-outlined">arrow_forward_ios</span>
+                    </a>                    
+                    <a class="desplegable__inicio__lista__item__oculto" href="#">MODO DÍA</a>
+                    <a class="desplegable__inicio__lista__item__oculto" href="#">MODO NOCHE</a>
+                </li>
+                <!-- Apartado que veremos en caso de que el usuario tenga una sesión iniciada para poder cerrarla -->
+                <li class="desplegable__inicio__lista__item">                    
+                    <a href="#" class="desplegable__inicio__lista__item__enlace desplegable__inicio__lista__item__enlace--cerrar">
+                        <span class="desplegable__inicio__lista__item__enlace__icono material-symbols-outlined">logout</span>
+                        CERRAR SESIÓN
+                    </a>
                 </li>
             </ul>
         </div>
 
-        <form class="desplegable__iniciar" method="get" action="#">
+        <!-- Formulario para iniciar sesión -->
+        <!-- Por comodida en la estructura con la implementación de JS el formulario estará carente de los siguientes atributos  method="post" action="#" -->
+        <form class="desplegable__iniciar">
             <h2 class="desplegable__iniciar__titulo">INICIAR SESIÓN</h2>
             <p class="desplegable__iniciar__informacion">Los credenciales son incorrectos</p>
             <input type="text" class="desplegable__iniciar__input" placeholder="Correo o Nombre de usuario" name="nombreUsuario">
             <input type="password" class="desplegable__iniciar__input" placeholder="Contraseña" name="clave">
-            <a class="desplegable__iniciar__boton" href="#">ENTRAR</a>
+            <!-- El input type="submit cambiado a un a para las pruebas y que no haga ningun tipo de redirect" -->
+            <a class="desplegable__iniciar__boton" value="" href="#">ENTRAR</a>
             <a class="desplegable__iniciar__enlace" href="#">Recuperar contraseña</a>
             <p class="desplegable__iniciar__registro">¿No tienes cuenta?</p>
             <a class="desplegable__iniciar__boton" href="#">REGISTRARSE</a>
         </form>
 
+        <!-- Formulario para el registro de usuario -->
         <form class="desplegable__registrar">
             <h2 class="desplegable__registrar__titulo">REGISTRARSE</h2>
             <input type="text" class="desplegable__registrar__input" placeholder="Nombre de usuario" name="nombreUsuario">
@@ -109,27 +182,39 @@
             <p class="desplegable__registrar__informacion">Introduce un correo válido</p>
             <input type="date" class="desplegable__registrar__input" name="fecha">
             <p class="desplegable__registrar__informacion">Introduce una fecha válido</p>
-            <a class="desplegable__registrar__boton" href="#">REGISTRARSE</a>
+            <!-- Este botón debería redirigir al iniciar sesion para que el usuario inicie sesión una vez registrado. Por no estropear en todos el form y crear mas JS lo he dejado
+            siga haciendo el redirect a la nada del form-->
+            <input type="submit" class="desplegable__registrar__boton" value="REGISTRARSE">
             <p class="desplegable__registrar__iniciar">¿Ya tienes una cuenta?</p>
             <a class="desplegable__registrar__boton" href="#">INICIAR SESIÓN</a>
         </form>
 
+        <!-- Formulario de contacto -->
         <form class="desplegable__contacto">
             <h2 class="desplegable__contacto__titulo">CONTACTO</h2>
             <input type="text" class="desplegable__contacto__input" placeholder="Nombre de usuario" name="nombreUsuario">
             <input type="text" class="desplegable__contacto__input" placeholder="Introduce tu correo" name="correo">
             <textarea type="text" class="desplegable__contacto__textarea" placeholder="Introduce tu mensaje" name="mensaje"></textarea>     
-            <a class="desplegable__contacto__boton" href="#">ENVIAR</a>
+            <input type="submit" class="desplegable__contacto__boton" value="ENVIAR">
             <p class="desplegable__contacto__informacion">Los credenciales son incorrectos</p>
+        </form>
+
+        <!-- Formulario para la recuperación de la cuenta en caso de la perdida de la contraseña -->
+        <form class="desplegable__recuperar">
+            <h2 class="desplegable__recuperar__titulo">RECUPERAR CUENTA</h2>
+            <input type="text" class="desplegable__recuperar__input" placeholder="Introduce tu correo" name="correo">    
+            <input type="submit" class="desplegable__recuperar__boton" value="RECUPERAR">
+            <p class="desplegable__recuperar__informacion">El correo no esta registrado.</p>
+            <p class="desplegable__recuperar__cuenta">Se te enviara un correo con la contraseña.</p>
         </form>
     </div>
 
+    <!-- Fondo que estará inactivo. El fondo se activará en el caso que el desplegable o un popup se inice.
+    Dará la sensación al usuario que no puede tocar nada mientras el menu desplegable este abierto. Si haces clic sobre el cerrará el
+    menu desplegable o popup que este abierto -->
     <div class="fondo__desplegable"></div>
-
-    <footer class="pie">
-        <p class="pie__copyright">Data provided by Marvel. © 2022 Marvel</p>
-    </footer>
-
-    <script src="/informacion.1e4a0065.js"></script>
+    
+    <!-- Enlace al script de Javascript que contiene todos los script de la página web -->
+    <script src="/perfil.b4ce7916.js"></script>    
 <script src="/BuscadorMarvel.59712999.js"></script></body>
 </html>

@@ -1,29 +1,60 @@
+//Encabezado de la página web
 .encabezado
-    height: 10%
-    width: 100%
+    width: 100%  
     min-height: $XL
-    max-height: $XL
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: start
     padding: 0 $XS 0 $XS
     
-
+    //Modificación única del encabezado de la página de inicio
     &--index
         background-color: $color_claro_primario
         justify-content: flex-end
     
-    &--informacion
+    //Modificación única del encabezado de la página de listados
+    &--listado
         background-color: $color_oscuro_primario
 
+        //Cambios en la distribución y tamaños en las distintas resoluciones del encabezado de listado
+        @media (max-width: 800px)
+            min-height: 92px  
+            display: grid
+            grid-template-columns: 1fr 12fr 1fr
+            
+            .encabezado__explorador
+                width: 100%
+
+                &__logo
+                    height: $L
+                    width: $L
+
+                &__buscador
+                    width: 100%
+                    min-width: 150px
+
+            .encabezado__nav
+                width: 100%
+                order: 2
+                grid-column-start: 1
+                grid-column-end: 4
+                
+                &__lista
+                    padding-right: 0
+
+                    &__item a
+                        font-size: $XXS                    
+
+    //Botón para el menu desplegable
     &__menu
         align-self: center     
         display: flex
-        align-items: center
+        max-width: 24px
+        justify-self: center
+        z-index: 2
 
         &__icono
-            font-size: $M
             text-align: center
             color: $color_oscuro_primario
 
@@ -33,24 +64,32 @@
             &:hover
                 color: $color_primario
 
+    //Logo de la página web que sirve para la navegación entre la página
+    &__logo
+        height: $XL
+        width: $XL
+        align-self: center
+        justify-self: center
+        background-image: url(../img/logo.svg)
+        background-size: cover
+        padding-right: $XL
+        z-index: 2
+
+    //Contiene el buscador del encabezado y el icono de la lupa
     &__explorador
         height: 100%
         width: 100%
         display: flex
         flex-direction: row
         align-items: center
-
-        &__logo
-            height: $XL
-            width: $XL
-            background-image: url(../images/logo.svg)
-            background-size: cover
+        z-index: 2
 
         &__buscador
             height: 60%
             width: 40%
-            max-width: 550px
-            padding-left: $XS
+            min-width: 280px
+            max-width: 650px
+            padding: 0 $XS
             display: flex
             justify-content: space-between
             align-items: center
@@ -76,7 +115,7 @@
                 align-items: center
                 justify-content: center     
                 background-color: $color_oscuro_secundario
-                border-radius: 0 12px 12px 0
+                border-radius: 0 $XS $XS 0
 
                 &__icono
                     color: $color_claro_primario
@@ -85,6 +124,7 @@
                     &:hover
                         color: $color_primario
 
+    //Lista de enlace de navegación entre las distintas formas de busqueda de la página web
     &__nav
         height: 100%
         width: 50%
@@ -92,10 +132,12 @@
         flex-direction: row
         justify-content: end
         align-content: center
+        z-index: 2
 
         &__lista
             height: 100%
             width: 100%
+            max-width: 720px
             display: grid
             grid-template-columns: 1fr 1fr 1fr 1fr
             color: $color_claro_primario
@@ -122,6 +164,11 @@
 
                 &__active                
                     border-bottom: 4px solid $color_primario
+                    pointer-events: none
 
                     & a
                         color: $color_primario
+        
+        //Cambios de tamaño del ancho para la nueva resolución del listado de enlaces del encabezado
+        @media (max-width: 1100px)
+            width: 95%
