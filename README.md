@@ -1,4 +1,15 @@
-# BuscadorMarvel
+# Hoja de estilo alternativa
+
+La hoja de estilo alternativa es que un html tenga varios estilos de css para que el usuario pueda elegir cual usar. El enlace que tenga un título significara que son los estilos alternativos de css. En caso de que los tres enlaces de CSS tuvieran título el primer enlace sería el predeterminado y el resto los alternativos.
+
+Ejemplo:
+   
+    <link rel="stylesheet" href="assets/sass/main.sass">
+    <link rel="stylesheet" href="assets/sass/main.sass" title="estilo-2">
+    <link rel="stylesheet" href="assets/sass/main.sass" title="estilo-3">
+   
+
+# Hoja de estilos directa o externa
 
 Hay 3 formas de dar estilos a nuestro CSS.
 
