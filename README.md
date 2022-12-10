@@ -2,9 +2,9 @@
 
 Hay 3 formas de dar estilos a nuestro CSS.
 
--Inline
--Externo
--Interno
+*Inline
+*Externo
+*Interno
 
 ## Inline
 
