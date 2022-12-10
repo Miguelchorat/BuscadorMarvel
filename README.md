@@ -2,9 +2,9 @@
 
 Hay 3 formas de dar estilos a nuestro CSS.
 
-*Inline
-*Externo
-*Interno
+   - Inline
+   - Externo
+   - Interno
 
 ## Inline
 
@@ -12,7 +12,7 @@ Se usa para dar directamente a un elemento especifico del html un estilo en su e
 
 Ejemplo: 
 
-<p style="color:white;">Texto</p>
+    <p style="color:white;">Texto</p>
 
 ## Interno
 
@@ -20,13 +20,13 @@ Se usa para dar directamente estilos al html desde el propio archivo html en la 
 
 Ejemplo:
 
-<style type="text/css">
+    <style type="text/css">
 
-    body {
-        background-color: black;
-    }
+        body {
+         background-color: black;
+        }
 
-</style>
+    </style>
 
 ## Externo
 
@@ -34,7 +34,7 @@ Enlazas tu archivo html con un archivo css externo.
 
 Ejemplo:
 
-<link rel="stylesheet" href="assets/sass/main.sass">
+    <link rel="stylesheet" href="assets/sass/main.sass">
 
 ## ¿Cuál usar y por qué?
 
